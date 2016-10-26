@@ -1,2 +1,2 @@
 # Code-Fights
-Programs written as solutions to codefights.com challenges
+This repository contains various programs I've written as solutions to the challenges presented in codefights.com
