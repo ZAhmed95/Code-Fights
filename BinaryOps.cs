@@ -23,4 +23,16 @@ public class BinaryOps
         //similarly, we do the same for the original even bits and move them into odd positions by doing n << 1.
         //then & it with the bitmask 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 (715827882 in decimal)
     }
+
+    //given an array of 4 integers a, where each integer is less than 256,
+    //"pack" all of the integers (max 8-bits each) into a single 32 bit integer, and return it
+    static int arrayPacking(int[] a)
+    {
+        int k = 0;
+        for (int i = 0; i < a.Length; i++)
+        {
+            k += a[i] << (i * 8);
+        }
+        return k;
+    }
 }
