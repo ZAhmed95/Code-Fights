@@ -47,4 +47,28 @@ public class BinaryOps
         }
         return mirrored;
     }
+
+    //given two numbers a and b, this function counts how many '1's occur in the binary representation of 
+    //all numbers in the range [a, b]
+    static int rangeBitCount(int a, int b)
+    {
+        int ones = 0;
+        for (int i = a; i <= b; i++)
+        {
+            ones += binaryOnes(i);
+        }
+        return ones;
+    }
+    //helper function for rangeBitCount, this takes an integer input and outputs how many '1's are in its binary form
+    static int binaryOnes(int n)
+    {
+        int ones = 0;
+        while (n > 0)
+        {
+            if (n % 2 == 1) ones++;
+            n /= 2;
+        }
+        return ones;
+    }
+
 }
