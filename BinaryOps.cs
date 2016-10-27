@@ -35,4 +35,16 @@ public class BinaryOps
         }
         return k;
     }
+
+    //given an integer, this function reverses all the bits in the given integer and returns the new integer
+    static int mirrorBits(int a)
+    {
+        int mirrored = 0;
+        while (a > 0)
+        {
+            mirrored = (mirrored << 1) + a % 2;
+            a /= 2;
+        }
+        return mirrored;
+    }
 }
